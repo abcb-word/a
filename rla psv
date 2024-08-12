@@ -1,0 +1,597 @@
+Option Explicit
+
+Sub SentToWord()
+
+     'Variable for automation
+    Dim wd As Word.Application 'Word Application
+    Dim wdDoc As Word.Document 'Word Document
+    Dim iRow As Long 'Variable to hold row and loop it
+    Dim sh As Worksheet 'Worksheet variable to refer the main sheet
+    
+    'Start word and new doc
+    Set wd = New Word.Application
+    
+    'set worksheet for available table
+    Set sh = ThisWorkbook.Sheets("Data")
+    iRow = 4 'Data starting from row 4
+    Do While sh.Range("B" & iRow).Value <> ""
+        
+        'opening word template
+        Set wdDoc = wd.Documents.Open(ThisWorkbook.Path & "\Laporan Utama RLA PSV.docx")
+        wd.Visible = False
+        
+        'Code to insert value
+        '1a. Tag_No
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Tag_No1"
+        wd.Selection.TypeText Text:=sh.Range("B" & iRow).Value
+        '1b. Tag_No
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Tag_No2"
+        wd.Selection.TypeText Text:=sh.Range("B" & iRow).Value
+        '1c. Tag_No
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Tag_No3"
+        wd.Selection.TypeText Text:=sh.Range("B" & iRow).Value
+        '1d. Tag_No
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Tag_No4"
+        wd.Selection.TypeText Text:=sh.Range("B" & iRow).Value
+        '1e. Tag_No
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Tag_No5"
+        wd.Selection.TypeText Text:=sh.Range("B" & iRow).Value
+        '1f. Tag_No
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Tag_No6"
+        wd.Selection.TypeText Text:=sh.Range("B" & iRow).Value
+        '1g. Tag_No
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Tag_No7"
+        wd.Selection.TypeText Text:=sh.Range("B" & iRow).Value
+        '1h. Tag_No
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Tag_No8"
+        wd.Selection.TypeText Text:=sh.Range("B" & iRow).Value
+        '1i. Tag_No
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Tag_No9"
+        wd.Selection.TypeText Text:=sh.Range("B" & iRow).Value
+        '1j. Tag_No
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Tag_No10"
+        wd.Selection.TypeText Text:=sh.Range("B" & iRow).Value
+        '1k. Tag_No
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Tag_No11"
+        wd.Selection.TypeText Text:=sh.Range("B" & iRow).Value
+        '1l. Tag_No
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Tag_No12"
+        wd.Selection.TypeText Text:=sh.Range("B" & iRow).Value
+        '1m. Tag_No
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Tag_No13"
+        wd.Selection.TypeText Text:=sh.Range("B" & iRow).Value
+        '1n. Tag_No
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Tag_No14"
+        wd.Selection.TypeText Text:=sh.Range("B" & iRow).Value
+        '1o. Tag_No
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Tag_No15"
+        wd.Selection.TypeText Text:=sh.Range("B" & iRow).Value
+        '1p. Tag_No
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Tag_No16"
+        wd.Selection.TypeText Text:=sh.Range("B" & iRow).Value
+        '1q. Tag_No
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Tag_No17"
+        wd.Selection.TypeText Text:=sh.Range("B" & iRow).Value
+        '1r. Tag_No
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Tag_No18"
+        wd.Selection.TypeText Text:=sh.Range("B" & iRow).Value
+        '1s. Tag_No
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Tag_No19"
+        wd.Selection.TypeText Text:=sh.Range("B" & iRow).Value
+        '1t. Tag_No
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Tag_No20"
+        wd.Selection.TypeText Text:=sh.Range("B" & iRow).Value
+
+        '2. No_Report
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="No_Report"
+        wd.Selection.TypeText Text:=sh.Range("C" & iRow).Value
+
+        '3a. PT_Pemilik
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="PT_Pemilik1"
+        wd.Selection.TypeText Text:=sh.Range("D" & iRow).Value
+        '3b. Pemilik
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="PT_Pemilik2"
+        wd.Selection.TypeText Text:=sh.Range("D" & iRow).Value
+        '3c. Pemilik
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="PT_Pemilik3"
+        wd.Selection.TypeText Text:=sh.Range("D" & iRow).Value
+        '3d. Pemilik
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="PT_Pemilik4"
+        wd.Selection.TypeText Text:=sh.Range("D" & iRow).Value
+        '3e. Pemilik
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="PT_Pemilik4"
+        wd.Selection.TypeText Text:=sh.Range("D" & iRow).Value
+        
+        '4. Field
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Field"
+        wd.Selection.TypeText Text:=sh.Range("E" & iRow).Value
+         
+        '5. Disiapkan
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Disiapkan"
+        wd.Selection.TypeText Text:=sh.Range("F" & iRow).Value
+        
+        
+        '6. Diperiksa
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Diperiksa"
+        wd.Selection.TypeText Text:=sh.Range("G" & iRow).Value
+        
+        
+        '7. Disetujui
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Disetujui"
+        wd.Selection.TypeText Text:=sh.Range("H" & iRow).Value
+        
+        
+        '8. Tanggal_Report
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Tanggal_Report"
+        wd.Selection.TypeText Text:=sh.Range("I" & iRow).Value
+        
+        '9. Interval_Pemeriksaan_Tahun
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Interval_Pemeriksaan_Tahun"
+        wd.Selection.TypeText Text:=sh.Range("J" & iRow).Value
+        
+        '10. Tahun_Pemeriksaan_Paling_Lambat
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Tahun_Pemeriksaan_Paling_Lambat"
+        wd.Selection.TypeText Text:=sh.Range("K" & iRow).Value
+        
+        '11. Serial_Number
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Serial_Number"
+        wd.Selection.TypeText Text:=sh.Range("L" & iRow).Value
+        
+        
+        '12. Manufacture
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Manufacture"
+        wd.Selection.TypeText Text:=sh.Range("M" & iRow).Value
+        
+        
+        '13. Type
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Type"
+        wd.Selection.TypeText Text:=sh.Range("N" & iRow).Value
+        
+        
+        '14. Size
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Size"
+        wd.Selection.TypeText Text:=sh.Range("O" & iRow).Value
+        
+        
+        '15. Year_used
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Year_used"
+        wd.Selection.TypeText Text:=sh.Range("P" & iRow).Value
+        
+        
+        '16a. Protected_Equipment
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Protected_Equipment1"
+        wd.Selection.TypeText Text:=sh.Range("Q" & iRow).Value
+        
+        '16b. Protected_Equipment
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Protected_Equipment2"
+        wd.Selection.TypeText Text:=sh.Range("Q" & iRow).Value
+        
+        '17. Description
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Description"
+        wd.Selection.TypeText Text:=sh.Range("R" & iRow).Value
+        
+        
+        '18. Design_Pressure
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Design_Pressure"
+        wd.Selection.TypeText Text:=sh.Range("S" & iRow).Value
+        
+        
+        '19. Operating_Pressure
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Operating_Pressure"
+        wd.Selection.TypeText Text:=sh.Range("T" & iRow).Value
+        
+        
+        '20. Service_Fluid
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Service_Fluid"
+        wd.Selection.TypeText Text:=sh.Range("U" & iRow).Value
+        
+        
+        '21. Exchange_Rate
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Exchange_Rate"
+        wd.Selection.TypeText Text:=sh.Range("V" & iRow).Value
+        
+        
+        '22. Injury_Cost
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Injury_Cost"
+        wd.Selection.TypeText Text:=sh.Range("W" & iRow).Value
+        
+        
+        '23. Replacement_Cost
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Replacement_Cost"
+        wd.Selection.TypeText Text:=sh.Range("X" & iRow).Value
+        
+        
+        '24. Production_Cost
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Production_Cost"
+        wd.Selection.TypeText Text:=sh.Range("Y" & iRow).Value
+        
+        
+        '25. Environment_Cost
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Environmental_Cost"
+        wd.Selection.TypeText Text:=sh.Range("Z" & iRow).Value
+        
+        
+        '26. Risk_Target
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Risk_Target"
+        wd.Selection.TypeText Text:=sh.Range("AA" & iRow).Value
+        
+        
+        '27. Tanggal_Pemeriksaan
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Tanggal_Pemeriksaan"
+        wd.Selection.TypeText Text:=sh.Range("AB" & iRow).Value
+        
+        
+        '28. Test_Media
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Test_Media"
+        wd.Selection.TypeText Text:=sh.Range("AC" & iRow).Value
+        
+        
+        '29. Setting_Pressure
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Setting_Pressure"
+        wd.Selection.TypeText Text:=sh.Range("AD" & iRow).Value
+        
+        
+        '30. Popping_test
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Popping_test"
+        wd.Selection.TypeText Text:=sh.Range("AE" & iRow).Value
+        
+        
+        '31. Leakage_Test
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Leakage_Test"
+        wd.Selection.TypeText Text:=sh.Range("AF" & iRow).Value
+        
+        
+        '32. Hasil
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Hasil"
+        wd.Selection.TypeText Text:=sh.Range("AG" & iRow).Value
+        
+        
+        '33. FailOpen_POF
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="FailOpen_POF"
+        wd.Selection.TypeText Text:=sh.Range("AH" & iRow).Value
+        
+        
+        '34. FailOpen_Kategori_POF
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="FailOpen_Kategori_POF"
+        wd.Selection.TypeText Text:=sh.Range("AI" & iRow).Value
+        
+        
+        '35. FailOpen_COF
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="FailOpen_COF"
+        wd.Selection.TypeText Text:=sh.Range("AJ" & iRow).Value
+        
+        
+        '36. FailOpen_Kategori_COF
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="FailOpen_Kategori_COF"
+        wd.Selection.TypeText Text:=sh.Range("AK" & iRow).Value
+        
+        
+        '37. FailOpen_Risk_Ranking
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="FailOpen_Risk_Ranking"
+        wd.Selection.TypeText Text:=sh.Range("AL" & iRow).Value
+        
+        
+        '38. Leakage_POF
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Leakage_POF"
+        wd.Selection.TypeText Text:=sh.Range("AM" & iRow).Value
+        
+        
+        '39. Leakage_Kategori_POF
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Leakage_Kategori_POF"
+        wd.Selection.TypeText Text:=sh.Range("AN" & iRow).Value
+        
+        
+        '40. Leakage_COF
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Leakage_COF"
+        wd.Selection.TypeText Text:=sh.Range("AO" & iRow).Value
+        
+        
+        '41. Leakage_Kategori_COF
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Leakage_Kategori_COF"
+        wd.Selection.TypeText Text:=sh.Range("AP" & iRow).Value
+        
+        
+        '42. Leakage_Risk_Ranking
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Leakage_Risk_Ranking"
+        wd.Selection.TypeText Text:=sh.Range("AQ" & iRow).Value
+        
+        
+        '43. RLA_Tahun
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="RLA"
+        wd.Selection.TypeText Text:=sh.Range("AR" & iRow).Value
+        
+        '44. RLA_Bulan
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="RLA"
+        wd.Selection.TypeText Text:=sh.Range("AS" & iRow).Value
+        
+        '45. Tanggal_Inspeksi_Kembali
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Tanggal_Inspeksi_Kembali"
+        wd.Selection.TypeText Text:=sh.Range("AT" & iRow).Value
+        
+      
+        '46. Interval_Inspeksi_Visual
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Interval_Inspeksi_Visual"
+        wd.Selection.TypeText Text:=sh.Range("AU" & iRow).Value
+        
+        
+        '47. Interval_Inspeksi_Visual_On_Stream
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Interval_Inspeksi_Visual_On_Stream"
+        wd.Selection.TypeText Text:=sh.Range("AV" & iRow).Value
+        
+        
+        '48. Interval_Popping_Test
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Interval_Popping_Test"
+        wd.Selection.TypeText Text:=sh.Range("AW" & iRow).Value
+        
+        
+        '49. Interval_Leak_Test
+        wd.Selection.GoTo what:=wdGoToBookmark, Name:="Interval_Leak_Test"
+        wd.Selection.TypeText Text:=sh.Range("AX" & iRow).Value
+        
+        
+        
+        'code to delete existing bookmark
+        On Error Resume Next
+        '1a
+        wdDoc.Bookmarks("Tag_No1").Delete
+        '1b
+        wdDoc.Bookmarks("Tag_No2").Delete
+        '1c
+        wdDoc.Bookmarks("Tag_No3").Delete
+        '1d
+        wdDoc.Bookmarks("Tag_No4").Delete
+        '1e
+        wdDoc.Bookmarks("Tag_No5").Delete
+        '1f
+        wdDoc.Bookmarks("Tag_No6").Delete
+        '1g
+        wdDoc.Bookmarks("Tag_No7").Delete
+        '1h
+        wdDoc.Bookmarks("Tag_No8").Delete
+        '1i
+        wdDoc.Bookmarks("Tag_No9").Delete
+        '1j
+        wdDoc.Bookmarks("Tag_No10").Delete
+        '1k
+        wdDoc.Bookmarks("Tag_No11").Delete
+        '1l
+        wdDoc.Bookmarks("Tag_No12").Delete
+        '1m
+        wdDoc.Bookmarks("Tag_No13").Delete
+        '1n
+        wdDoc.Bookmarks("Tag_No14").Delete
+        '1o
+        wdDoc.Bookmarks("Tag_No15").Delete
+        '1p
+        wdDoc.Bookmarks("Tag_No16").Delete
+        '1q
+        wdDoc.Bookmarks("Tag_No17").Delete
+        '1r
+        wdDoc.Bookmarks("Tag_No18").Delete
+        '1s
+        wdDoc.Bookmarks("Tag_No19").Delete
+        '1t
+        wdDoc.Bookmarks("Tag_No20").Delete
+        
+       
+        '2
+        wdDoc.Bookmarks("No_Report").Delete
+
+        '3a
+        wdDoc.Bookmarks("PT_Pemilik1").Delete
+        '3b
+        wdDoc.Bookmarks("PT_Pemilik2").Delete
+        '3c
+        wdDoc.Bookmarks("PT_Pemilik3").Delete
+        '3d
+        wdDoc.Bookmarks("PT_Pemilik4").Delete
+        '3e
+        wdDoc.Bookmarks("PT_Pemilik5").Delete
+        
+                
+        '4
+        wdDoc.Bookmarks("Field").Delete
+             
+        
+        '5
+        wdDoc.Bookmarks("Disiapkan").Delete
+        
+        
+        '6
+        wdDoc.Bookmarks("Diperiksa").Delete
+        
+        
+        '7
+        wdDoc.Bookmarks("Disetujui").Delete
+        
+        
+        '8
+        wdDoc.Bookmarks("Tanggal_Report").Delete
+        
+        
+        '9
+        wdDoc.Bookmarks("Interval_Pemeriksaan_Tahun").Delete
+        
+        
+        '10
+        wdDoc.Bookmarks("Tahun_Pemeriksaan_Paling_Lambat").Delete
+        
+        
+        '11
+        wdDoc.Bookmarks("Serial_Number").Delete
+        
+        
+        '12
+        wdDoc.Bookmarks("Manufacture").Delete
+        
+        
+        '13
+        wdDoc.Bookmarks("Type").Delete
+        
+        
+        '14
+        wdDoc.Bookmarks("Size").Delete
+        
+        
+        '15
+        wdDoc.Bookmarks("Year_used").Delete
+        
+        
+        '16a
+        wdDoc.Bookmarks("Protected_Equipment1").Delete
+        '16b
+        wdDoc.Bookmarks("Protected_Equipment2").Delete
+        
+        
+        '17
+        wdDoc.Bookmarks("Description").Delete
+        
+        
+        '18
+        wdDoc.Bookmarks("Design_Pressure").Delete
+        
+        
+        '19
+        wdDoc.Bookmarks("Operating_Pressure").Delete
+        
+        
+        '20
+        wdDoc.Bookmarks("Service_Fluid").Delete
+        
+                
+        '21
+        wdDoc.Bookmarks("Exchange_Rate").Delete
+        
+        
+        '22
+        wdDoc.Bookmarks("Injury_Cost").Delete
+        
+        
+        '23
+        wdDoc.Bookmarks("Replacement_Cost").Delete
+        
+        
+        '24
+        wdDoc.Bookmarks("Production_Cost").Delete
+        
+        
+        '25
+        wdDoc.Bookmarks("Environmental_Cost").Delete
+        
+        
+        '26
+        wdDoc.Bookmarks("Risk_Target").Delete
+        
+        
+        '27
+        wdDoc.Bookmarks("Tanggal_Pemeriksaan").Delete
+        
+        
+        '28
+        wdDoc.Bookmarks("Test_Media").Delete
+        
+        
+        '29
+        wdDoc.Bookmarks("Setting_Pressure").Delete
+        
+        
+        '30
+        wdDoc.Bookmarks("Popping_Test").Delete
+        
+        
+        '31
+        wdDoc.Bookmarks("Leaking_test").Delete
+        
+        
+        '32
+        wdDoc.Bookmarks("Hasil").Delete
+        
+        
+        '33
+        wdDoc.Bookmarks("FailOpen_POF").Delete
+        
+        
+        '34
+        wdDoc.Bookmarks("FailOpen_Kategori_POF").Delete
+        
+        
+        '35
+        wdDoc.Bookmarks("FailOpen_COF").Delete
+        
+        
+        '36
+        wdDoc.Bookmarks("FailOpen_Kategori_COF").Delete
+        
+        
+        '37
+        wdDoc.Bookmarks("FailOpen_Risk_Ranking").Delete
+        
+        
+        '38
+        wdDoc.Bookmarks("Leakage_POF").Delete
+        
+        
+        '39
+        wdDoc.Bookmarks("Leakage_Kategori_POF").Delete
+        
+        
+        '40
+        wdDoc.Bookmarks("Leakage_COF").Delete
+        
+        
+        '41
+        wdDoc.Bookmarks("Leakage_Kategori_COF").Delete
+        
+        
+        '42
+        wdDoc.Bookmarks("Leakage_Risk_Ranking").Delete
+        
+        
+        '43
+        wdDoc.Bookmarks("RLA_Tahun").Delete
+        
+        '44
+        wdDoc.Bookmarks("RLA_Bulan").Delete
+        
+        
+        '45
+        wdDoc.Bookmarks("Tanggal_Inspeksi_Kembali").Delete
+              
+ 
+        '46
+        wdDoc.Bookmarks("Interval_Inspeksi_Visual").Delete
+        
+        '47
+        wdDoc.Bookmarks("Interval_Inspeksi_Visual_On_Stream").Delete
+        
+        '48
+        wdDoc.Bookmarks("Interval_Popping_Test").Delete
+        
+               
+        '49
+        wdDoc.Bookmarks("Interval_Leak_Test").Delete
+        
+
+        
+    'save word file (Tag_No)
+    wdDoc.SaveAs2 (ThisWorkbook.Path & "\" & sh.Range("A" & iRow).Value & "_Laporan Utama RLA_" & sh.Range("B" & iRow).Value & ".docx")
+    
+    'close word file
+    wdDoc.Close
+    
+    'release memory wddoc
+    Set wdDoc = Nothing
+           
+        iRow = iRow + 1
+    Loop
+    
+    wd.Quit 'close word
+    Set wd = Nothing 'release memory
+    
+    MsgBox "The report has been generated succesfully!"
+
+
+    
+End Sub
+
+
